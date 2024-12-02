@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: "Noto-Serif", serif;
+  background-color: #000000;
+
+}
+
+#resize-container__input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#resize-container__content {
+  width: var(--width);
+  margin-top: var(--input-height);
+  margin-inline: auto;
+  background-color: #fff;
+  transition: width 300ms ease-out;
+  max-height: 90vh;
+}
+
+#slider {
+  display: block;
+  width: 18.75rem;
+  margin-inline: auto;
+}
+
+p, h1{
+  margin: 0;
+  letter-spacing: -0.1rem;
+}
+
+#root {
+  box-sizing: border-box;
+  min-height: 90vh;
+  background-image: url('../assets/Bg1.jpg');
+  background-size: 100% 100%;
+}
+
+.poster4-container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.poster4-main{
+  display: flex;
+}
+
+.poster4-main-left {
+  position: relative;
+  box-sizing: border-box;
+  height: 84vh;
+  padding: 30px;
+  width: 70%;
+  background-color: #0F9968;
+  box-shadow: 3px 1px 4px 0px rgba(0, 0, 0, 0.70);
+  overflow: hidden;
+  z-index: 10;
+} 
+
+.poster4-main-left::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left를 한 번에 설정 */
+  background: url('../assets/BgEffect.png') bottom / 100% no-repeat;
+  mix-blend-mode: color-dodge;
+  z-index: -1;
+}
+
+
+
+
+.main-h1-1{
+  font-size: clamp(1rem, 9vh, 110px);
+  font-weight: 700;
+  line-height: 112.115%;
+  line-height: 7rem;
+}
+
+.main-h1-2{
+  display: none;
+  font-weight: 700;
+  line-height: 112.115%;
+}
+
+.poster4-main-right{
+  width: 30%;
+  height: 100%;
+}
+
+.poster4-main-yellow{
+  box-sizing: border-box;
+  font-size: clamp(1rem, 7vh, 76px);
+  background-color: #E7E514;
+  font-weight: 700;    
+  padding: 30px;
+  box-shadow: 3px 1px 4px 0px rgba(0, 0, 0, 0.70);
+}
+
+.poster4-main-p{
+  padding: 36px;
+  font-weight: 700;
+  font-size: clamp(10px, 2vh, 18px);
+  line-height: 1.8rem;
+}
+
+.main-sub-1{
+  display: none;
+}
+.main-sub-2{
+  display: none;
+}
+
+.main-1280{
+  display: none;
+}
+
+.poster4-footer{
+  font-size: clamp(1rem, 2vh, 24px);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px 30px 40px;
+}
+.poster4-footer-center{
+  margin:0 10px;
+}
+
+@media (max-width: 1279px) {
+  #root{
+      background-image: url('../assets/Bg2.jpg');
+  }
+  .main-h1-1{
+      display: none;
+  }
+  .main-h1-2{
+      display: block;
+      font-size: clamp(1rem, 8vh, 100px);
+  }
+  .main-sub-1{
+      display: block;
+      font-size:clamp(1rem, 5vh, 52px);
+      font-weight: 700;
+  }
+  .poster4-main-yellow{
+      display: none;
+  }
+
+  /* .poster4-footer{
+      justify-content: start;
+  }
+  .poster4-footer-right{
+      display: none;
+  } */
+
+}
+
+@media (max-width: 799px) {
+  #root{
+      background-image: url('../assets/Bg3.jpg');
+  }
+  .poster4-main{
+      display: block;
+  }
+  .poster4-main-left{
+      width: 100%;
+      height: auto;
+      padding: 22px;
+      padding-bottom: 15vh;
+  }
+  .poster4-main-right{
+      margin-left: auto;
+      width: 80%;
+  }
+  .main-sub-1{
+      display: none;
+  }
+  .poster4-main-p{
+      padding: 10px 20px 0 20px;
+      font-size: 16px;
+  }
+  .main-h1-2{
+      font-size: 62px;
+      text-align: right;
+  }
+  .main-sub-2{
+      display: block;
+      font-weight: 700;
+      padding: 20px;
+      font-size: 35px;
+  }
+  
+  .main-1280{
+      display: none;
+  }
+  .poster4-footer{
+      justify-content: end;
+      padding: 30px 40px 30px 40px;
+  }
+
+}

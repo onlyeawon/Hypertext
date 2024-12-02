@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    transition: opacity 0.4s ease-in-out; /* 페이드 아웃 애니메이션 */
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1; /* 로드 후 서서히 보이게 */
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.wrapper {
+    width: min(60ch, 100% - 4rem);
+    min-height: max(50rem, 100dvh);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 30px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding-bottom: 60px;
+    position: relative; 
+}
+
+.animTarget {
+    position: relative;
+    text-align: center;
+}
+
+.animTarget img {
+    width: 100%;
+    height: auto;
+}
+
+.animTarget p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 34px;
+    color: rgb(0, 0, 0); /* 텍스트를 흰색으로 변경 */
+}
+
+span{
+    font-size: 24px;
+}

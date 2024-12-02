@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+}
+
+#resize-container__input {
+    text-align: center;
+    margin-bottom: -15px;
+}
+
+#width-slider {
+    width: 18.75rem;
+}
+  
+.layout-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* 위에 칼라 까는 것 */
+.poster2-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-image: url(../images/bgup.png);
+
+    z-index: 10;
+    mix-blend-mode: exclusion;
+    pointer-events: none; 
+
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.poster2-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-image: url(../images/bgbg.png);
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+    z-index: 11; 
+    pointer-events: none;
+
+    mix-blend-mode: darken;
+
+}
+
+
+.flexbox-767{
+    display: flex;
+    min-height: 180px;
+    margin-top: 20px;
+}
+
+.desktop-grid{
+    display: block;
+    height: 100%;
+}
+
+.mobile-flex{
+    display: none;
+}
+
+.width-33{
+    width: 230px;
+}
+
+.poster2-page {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.font-Poiret {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 1000;
+}
+
+.font-Cooper{
+    font-family: "Noto Serif KR", serif;
+    font-weight: 900;
+
+}
+
+.poster2-page .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, calc(25vh - 44px));
+    grid-template-areas:
+        'a a a a a d'
+        'b b b b b d'
+        'b b b b b d'
+        'c c c c c d';
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.poster2-page .grid-container .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    
+    width: 40%;
+    height: 100%; /* 높이 조정 */
+
+    background-image: url(../images/Image11.png); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지가 전체 영역을 덮도록 설정 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    
+}
+
+
+.poster2-page .grid-container div {
+    background-size: 100% 100%; /* 그리드 크기에 맞춰 강제로 조정 */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.poster2-page .grid-container .section-1 {
+    grid-area: a;
+    display: flex;
+}
+
+.image-1 {
+    background-image: url(../images/Image1.png);
+    width: 50%;
+    margin-right: 20px;
+}
+
+.image-1-right {
+    width: 2px; /* 선의 두께 */
+    background-color: black;
+}
+
+.image-2 {
+    background-image: url(../images/Image2.png);
+    width: 50%;
+}
+
+.poster2-page .grid-container .section-2 {
+    grid-area: b;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        'e e f f g'
+        'h j f f g';
+}
+
+.image-3 {
+    background-image: url(../images/Image3.png);
+    grid-area: e;
+}
+
+.image-4 {
+    background-image: url(../images/Image4.png);
+    grid-area: h;
+}
+
+.image-5 {
+    background-image: url(../images/Image5.png);
+    grid-area: j;
+}
+
+.image-6 {
+    background-image: url(../images/Image6.png);
+    grid-area: f;
+    margin-left: 20px;
+}
+
+.image-7 {
+    position: relative; /* 부모 요소에 relative 추가 */
+    background-image: url(../images/Image7.png);
+    grid-area: g;
+}
+
+.image-7::before {
+    content: "";
+    position: absolute;
+    width: 20px; /* 검정색 줄의 너비 */
+    height: 100%; /* 이미지의 높이에 맞추기 */
+    background-color: black; /* 검정색으로 설정 */
+}
+
+.poster2-page .grid-container .section-3 {
+    grid-area: c;
+    display: flex;
+}
+
+.image-8 {
+    background-image: url(../images/Image8.png);
+    width: 20%;
+    margin-right: 20px;
+}
+
+.image-9 {
+    background-image: url(../images/Image9.png);
+    width: 20%;
+    margin-right: 20px;
+}
+
+.image-10 {
+    background-image: url(../images/Image10.png);
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.poster2-page .grid-container .title {
+    grid-area: d;
+    font-size: 84px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    writing-mode: vertical-rl;
+    padding: 20px 0px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.poster2-page img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.poster2-page .poster2-footer {
+    font-family: 'Pretendard', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 38px;
+}
+
+@media (max-width: 1279px) {
+
+    .poster2-page .title.font-Poiret {
+        border-bottom: 20px solid black; /* 하단에 검정색 줄 추가 */
+        padding-bottom: 10px; /* 줄과 텍스트 사이의 간격 */
+    }
+    .poster2-page .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .poster2-page .grid-container .num {
+        
+        /* margin-right: 0px; */
+        max-height: 240px;
+    }
+
+    .poster2-page .grid-container .title {
+        margin-top: 20px;
+        writing-mode: horizontal-tb;
+        padding: 20px;
+    }
+
+    .poster2-page .grid-container .section-1 {
+        height: 25%;
+    }
+
+    .poster2-page .grid-container .section-2 {
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr;
+        height: 45%;
+    }
+
+    .poster2-page .grid-container .section-3 {
+        margin-top: 20px;
+        height: 25%;
+    }
+
+    .poster2-page .grid-container .section-3 .image-10 {
+        width: 60%;
+    }
+}
+
+/* 800px 이하로 줄어들 때 */
+@media (max-width: 800px) {
+    .layout-container {
+        width: 100%;
+    }
+    .poster2-page {
+        background-image: url('../images/poster3.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.small-layout .poster2-page {
+    background-image: url('../images/poster3.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.small-layout .grid-container div,
+.small-layout .grid-container .section-1,
+.small-layout .grid-container .section-2,
+.small-layout .grid-container .section-3,
+.small-layout .grid-container .title,
+.small-layout .grid-container .num {
+    display: none;
+}

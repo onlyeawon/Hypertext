@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인트로</title>
+    <link rel="stylesheet" href="../style/intro.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('fade-in');
+        });
+        function goBack() {
+            document.body.classList.add('fade-out');
+
+            setTimeout(function() {
+                history.back();
+            }, 400); // 1초 후에 뒤로 가기 실행
+        }
+    </script>
+</head>
+<body onclick="goBack()"> 
+    <div class="wrapper">
+        <div class="container">
+          <div class="animTarget">
+            <img src="../assets/paper.png" alt="">
+            <p>
+                <!-- <span>Hypertext Laboratory</span> -->
+         
+            
+                 지류와 웹의 경계선에서, 반응형 웹 사이트에서 텍스트 사이즈 변화와 배치는 
+                 어떻게 되어야할까? 하이퍼텍스트 실험실은 네 개의 지류 콘텐츠 책을 반응형 웹에서 구현되는 가변형 포스터로 
+                 만들어, 디지털상에서의 자유로운 변화를 보여준다.
+               </p> 
+          </div>
+        </div>
+      </div>
+</body>
+</html>
