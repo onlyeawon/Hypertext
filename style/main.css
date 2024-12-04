@@ -49,13 +49,13 @@ body {
 }
 
 button {
-    width: 160px;
-    height: 60px;
+    width: 220px;
+    height: 90px;
     color: black; /* 텍스트 색상 수정 (기존의 변수를 제거) */
     background-color: var(--button-color);
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
-    border: 5px solid white; /* 두꺼운 화이트 외곽선 추가 */
+    border: 9px solid white; /* 두꺼운 화이트 외곽선 추가 */
     border-radius: 50px;
     box-shadow: var(--box-shadow);
     transition: 0.3s;
