@@ -13,7 +13,7 @@ function init() {
 
   // 슬라이더 초기화
   if (slider) {
-    slider.value = 1600; // 초기값 설정
+    slider.value = 2100; // 초기값 설정
     document.documentElement.style.setProperty(
       '--width',
       `${slider.value / 16}rem`
@@ -65,7 +65,7 @@ function applyResponsiveStyles(widthValue) {
   }
 
   // 큰 화면 (1200px 이상 1600px 미만)
-  if (widthValue >= 1200 && widthValue < 1600) {
+  if (widthValue >= 1200 && widthValue < 2100) {
     resetStyles();
 
     poster4Container.style.minHeight = '100vh';
